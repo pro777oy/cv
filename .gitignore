@@ -1,0 +1,27 @@
+/build/
+/output/
+/.tools/
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+.DS_Store
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Temporary build files
+build/
+
+# OS/editor files
+.DS_Store
+.vscode/
+

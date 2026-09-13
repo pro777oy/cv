@@ -1,0 +1,32 @@
+% Both entry points use this exact section order.
+\input{shared/header}
+\CVSection{Research Interests}
+\ifcvfocus
+  \input{variants/cv-research-interests}
+\else
+  \input{variants/se-research-interests}
+\fi
+\CVSection{Publications}
+\input{shared/publications}
+\CVSection{Research Experience}
+\input{shared/research-experience}
+\CVSection{Education}
+\input{shared/education}
+\CVSection{Professional Experience}
+\input{shared/professional-experience}
+\CVSection{Selected Projects}
+\input{shared/projects}
+\ifcvfocus
+  \input{variants/cv-projects}
+\else
+  \input{variants/se-projects}
+\fi
+\CVSection{Technical Skills}
+\input{shared/skills}
+\ifcvfocus
+  \input{variants/cv-skills}
+\else
+  \input{variants/se-skills}
+\fi
+\CVSection{References}
+\input{shared/references}
