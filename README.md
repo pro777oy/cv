@@ -24,6 +24,7 @@ cv/
 │   ├── professional-experience.tex # Roles, dates, employers, shared work bullets
 │   ├── projects.tex                # Canonical project records and descriptions
 │   ├── skills.tex                  # Canonical skill category contents
+│   ├── certifications.tex          # Certification records shared by both variants
 │   └── references.tex              # Referee names, titles, affiliations, emails
 ├── variants/
 │   ├── cv-research-interests.tex
@@ -61,7 +62,8 @@ Both variants always follow this order, controlled by `shared/document.tex`:
 6. Professional Experience
 7. Selected Projects
 8. Technical Skills
-9. References
+9. Certifications
+10. References
 
 The Computer Vision variant places Computer Vision first in Research Interests,
 gives image segmentation more detail, omits the lower-priority Task Management
