@@ -1,6 +1,6 @@
 # Saad Kabir Uddin — PhD CVs
 
-Two academic CV variants share one set of factual records. Both use a custom
+Three academic CV variants share one set of factual records. All use a custom
 `article` layout with US letter paper, Latin Modern fonts, 10.5 pt body text,
 single-column reading order, and clickable links. No shell escape is required.
 XeLaTeX and Tectonic use `fontspec` with explicitly selected Latin Modern OTF
@@ -12,7 +12,8 @@ T1 encoding, `lmodern`, and `glyphtounicode` mappings instead.
 ```text
 cv/
 ├── cv-computer-vision.tex          # Computer Vision entry point
-├── cv-software-engineering.tex     # Software Engineering entry point
+├── cv-se4ai.tex     # SE4AI entry point
+├── cv-ai4se.tex                    # AI for SE4AI entry point
 ├── commands.tex                   # Packages, typography, layout, entry macros
 ├── shared/
 │   ├── common-data.tex             # Name, contact links, reusable common facts
@@ -28,7 +29,8 @@ cv/
 │   └── references.tex              # Referee names, titles, affiliations, emails
 ├── variants/
 │   ├── cv-research-interests.tex
-│   ├── se-research-interests.tex
+│   ├── se4ai-research-interests.tex
+│   ├── ai4se4ai-research-interests.tex
 │   ├── cv-projects.tex             # Project selection and emphasis
 │   ├── se-projects.tex
 │   ├── cv-skills.tex               # Skill category order
@@ -52,7 +54,7 @@ shared files. Research Interests is the exception: each variant has its own
 short line in `variants/*-research-interests.tex`. These lines describe research
 interests, not additional publications or prior research achievements.
 
-Both variants always follow this order, controlled by `shared/document.tex`:
+All three variants follow this order, controlled by `shared/document.tex`:
 
 1. Header / Contact Information
 2. Research Interests
@@ -67,12 +69,15 @@ Both variants always follow this order, controlled by `shared/document.tex`:
 
 The Computer Vision variant places Computer Vision first in Research Interests,
 gives image segmentation more detail, omits the lower-priority Task Management
-Tool, and lists Machine Learning & Computer Vision skills first. The Software
-Engineering variant places Software Engineering first in Research Interests,
+Tool, and lists Machine Learning & Computer Vision skills first. The SE4AI variant leads with Software Engineering for AI (SE4AI), reliable ML
+systems, testing, deployment, monitoring, architecture and MLOps in Research Interests,
 emphasizes enterprise work through bullet order, retains a brief Task Management
 Tool entry after the research projects, and lists programming and software skills
 before machine learning skills. Publications remain the same Computer Vision
-research record in both versions. The bank role's shared bullets and their
+research record in both versions. Both variants include AI4SE as a research
+interest, and the Computer Vision variant connects visual robustness to SE4AI.
+These are proposed research directions; MLOps and AI4SE are not presented as
+completed projects, publications, or demonstrated technical skills. The bank role's shared bullets and their
 focus-dependent order live in `shared/professional-experience.tex`.
 
 ## Build locally
@@ -112,14 +117,15 @@ TECTONIC=/absolute/path/to/tectonic bash /absolute/path/to/cv/build.sh
 Tectonic may need network access on its first run to populate its TeX bundle
 cache. The script does not install tools. It reports missing compilers and stops
 on compilation errors. Compiler logs are kept in `build/`; named deliverables
-are updated only after both variants compile successfully:
+are updated only after all three variants compile successfully:
 
 - `output/pdf/Saad_Kabir_Uddin_PhD_CV_Computer_Vision.pdf`
-- `output/pdf/Saad_Kabir_Uddin_PhD_CV_Software_Engineering.pdf`
+- `output/pdf/Saad_Kabir_Uddin_PhD_CV_SE4AI.pdf`
+- `output/pdf/Saad_Kabir_Uddin_PhD_CV_AI4SE.pdf`
 
 To compile just one variant manually, first change into `cv/` (or the extracted
 archive folder) and create `build/`, then use either example below. Substitute
-the Software Engineering entry point as needed. XeLaTeX is recommended to match
+the SE4AI entry point as needed. XeLaTeX is recommended to match
 the Tectonic engine used for the supplied PDFs; pdfLaTeX is also supported, but
 may produce different line and page breaks.
 
@@ -147,8 +153,8 @@ engines, including when invoked through `latexmk`.
    `cv-computer-vision.tex`.
 3. Recompile and download the PDF as
    `Saad_Kabir_Uddin_PhD_CV_Computer_Vision.pdf`.
-4. Change the main document to `cv-software-engineering.tex`, recompile, and
-   download it as `Saad_Kabir_Uddin_PhD_CV_Software_Engineering.pdf`.
+4. Change the main document to `cv-se4ai.tex`, recompile, and
+   download it as `Saad_Kabir_Uddin_PhD_CV_SE4AI.pdf`.
 
 Keep both entry points in the same project so edits to shared records apply to
 both. The build script is for local use; Overleaf compiles the selected main
@@ -168,7 +174,7 @@ after the current bank role in `shared/professional-experience.tex`, keeping the
 internships and later sections on the next page. Review this page break when
 content expands; adjust wording or the break before reducing the body font.
 
-After meaningful edits, compile and visually inspect **both** PDFs. Check page
+After meaningful edits, compile and visually inspect **all three** PDFs. Check page
 count, margins, publication wrapping, headings, dates, bullets, references, and
 the page break after the bank role. Review compiler logs for overfull boxes and
 other relevant warnings. Also check selectable text, reading order, embedded
@@ -183,3 +189,17 @@ has a `Project link` below its title. Contact and profile links use the same
 styling. Edit `\VisibleLink` and the `cvlink` color in `commands.tex` to change
 this presentation for both variants at once. The proceedings publication is
 listed before the book chapter in `shared/publications.tex`.
+
+## AI4SE application variant
+
+`cv-ai4se.tex` leads with AI for Software Engineering, AI/LLM-assisted testing,
+bug detection, fault localization, program repair, and code generation/evaluation.
+SE4AI is also included in this variant. These are prospective research interests;
+the publication and research-experience records remain the existing Computer
+Vision work. It reuses the SE4AI project selection, skill order,
+and professional-experience emphasis without introducing new achievement claims.
+
+Build all three variants with `bash build.sh`. On Overleaf, select
+`cv-ai4se.tex` as the main document and XeLaTeX as the compiler. The AI4SE
+entry point overrides `\SoftwareResearchInterestsFile`; maintain its interests
+in `variants/ai4se4ai-research-interests.tex` and factual records in `shared/`.

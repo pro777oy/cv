@@ -1,10 +1,11 @@
-% Both entry points use this exact section order.
+% All entry points use this section order. AI4SE reuses the software-focused records.
+\providecommand{\SoftwareResearchInterestsFile}{variants/se4ai-research-interests}
 \input{shared/header}
 \CVSection{Research Interests}
 \ifcvfocus
   \input{variants/cv-research-interests}
 \else
-  \input{variants/se-research-interests}
+  \input{\SoftwareResearchInterestsFile}
 \fi
 \CVSection{Publications}
 \input{shared/publications}

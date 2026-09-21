@@ -38,8 +38,8 @@ else
   exit 1
 fi
 
-printf 'Building both CV variants with %s.\n' "$compiler"
-for source in cv-computer-vision.tex cv-software-engineering.tex; do
+printf 'Building all three CV variants with %s.\n' "$compiler"
+for source in cv-computer-vision.tex cv-se4ai.tex cv-ai4se.tex; do
   case "$compiler" in
     latexmk-xelatex)
       latexmk -xelatex -no-shell-escape -interaction=nonstopmode -halt-on-error \
@@ -62,9 +62,11 @@ for source in cv-computer-vision.tex cv-software-engineering.tex; do
   esac
 done
 
-# Update deliverables only after both variants compile successfully.
+# Update deliverables only after all three variants compile successfully.
 cp -- build/cv-computer-vision.pdf \
   output/pdf/Saad_Kabir_Uddin_PhD_CV_Computer_Vision.pdf
-cp -- build/cv-software-engineering.pdf \
-  output/pdf/Saad_Kabir_Uddin_PhD_CV_Software_Engineering.pdf
+cp -- build/cv-se4ai.pdf \
+  output/pdf/Saad_Kabir_Uddin_PhD_CV_SE4AI.pdf
+cp -- build/cv-ai4se.pdf \
+  output/pdf/Saad_Kabir_Uddin_PhD_CV_AI4SE.pdf
 printf 'PDFs written to %s/output/pdf/\n' "$script_dir"
