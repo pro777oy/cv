@@ -2,16 +2,17 @@
 \newcommand{\SegmentationProject}[1]{%
   \ProjectEntry{Deep Learning with PyTorch Image Segmentation}{Aug 2024}{https://colab.research.google.com/drive/1yWOlh09kseeSswBDAZEwQuDnvLYih22R?usp=drive_link}
   \begin{itemize}
-    \item Developed a semantic segmentation pipeline using U-Net with an EfficientNet-B0 encoder, Python, PyTorch, OpenCV, and Albumentations.
-    \item Prepared image/mask datasets and dataloaders; trained with Dice Loss and BCEWithLogitsLoss. Selected the best checkpoint by validation loss and ran inference.\ifnum#1=1\relax\space Configured a GPU runtime and trained for 25 epochs.\fi
+    \item Built a semantic segmentation pipeline with U-Net and an EfficientNet-B0 encoder using Python, PyTorch, OpenCV, and Albumentations.
+    \item Prepared image and mask datasets and dataloaders, trained with Dice Loss and BCEWithLogitsLoss, and selected a checkpoint by validation loss before running inference.\ifnum#1=1\relax\space Trained for 25 epochs on a GPU runtime.\fi
   \end{itemize}}
 \newcommand{\ThalassemiaProject}{%
   \ProjectEntry{Prediction of Thalassemia Using Machine Learning Models}{Jun 2024}{https://colab.research.google.com/drive/1YXZuQIgNnTpWguKGgcrKjSUxn4CH6LLv?usp=drive_link}
   \begin{itemize}
-    \item Personal research on thalassemia risk prediction from clinical and diagnostic features: preprocessed data, prepared features, compared models, and analyzed performance visually using Python, PyTorch, scikit-learn, Pandas, NumPy, and Matplotlib.
+    \item Explored thalassemia risk prediction from clinical and diagnostic features. Prepared the data, compared models, and plotted their performance using Python, PyTorch, scikit-learn, Pandas, NumPy, and Matplotlib.
   \end{itemize}}
-\newcommand{\TaskProject}{%
-  \ProjectEntry{Task Management Tool}{Apr 2024}{https://pro777oy.github.io/easytask/}
+\newcommand{\RecWizProject}{%
+  \Needspace{6\baselineskip}\textbf{RecWiz / Reconciliation Wizard}\par\nopagebreak
   \begin{itemize}
-    \item Built an Angular application for task creation, assignment, completion, and shared tracking.
+    \item Built a reconciliation application with an ASP.NET Core Web API and Angular. Used CQRS, MediatR, and EF Core to organize backend processing and data access.
+    \item Added JWT authentication, configurable source ingestion, batch processing, and a workflow for comparing records.
   \end{itemize}}

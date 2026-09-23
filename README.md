@@ -1,6 +1,6 @@
 # Saad Kabir Uddin — PhD CVs
 
-Three academic CV variants share one set of factual records. All use a custom
+Four academic CV variants share one set of factual records. All use a custom
 `article` layout with US letter paper, Latin Modern fonts, 10.5 pt body text,
 single-column reading order, and clickable links. No shell escape is required.
 XeLaTeX and Tectonic use `fontspec` with explicitly selected Latin Modern OTF
@@ -11,6 +11,7 @@ T1 encoding, `lmodern`, and `glyphtounicode` mappings instead.
 
 ```text
 cv/
+├── cv-software-engineering.tex     # General Software Engineering entry point
 ├── cv-computer-vision.tex          # Computer Vision entry point
 ├── cv-se4ai.tex     # SE4AI entry point
 ├── cv-ai4se.tex                    # AI for SE4AI entry point
@@ -26,9 +27,9 @@ cv/
 │   ├── projects.tex                # Canonical project records and descriptions
 │   ├── skills.tex                  # Canonical skill category contents
 │   ├── certifications.tex          # Certification records shared by both variants
-│   └── references.tex              # Referee names, titles, affiliations, emails
 ├── variants/
 │   ├── cv-research-interests.tex
+│   ├── software-engineering-research-interests.tex
 │   ├── se4ai-research-interests.tex
 │   ├── ai4se4ai-research-interests.tex
 │   ├── cv-projects.tex             # Project selection and emphasis
@@ -45,7 +46,7 @@ cv/
 
 Change a phone number, email, profile URL, university name, thesis title, or
 current employer in `shared/common-data.tex`. Edit a publication, role, degree,
-project, skill category, or referee in its corresponding `shared/` file. These
+project, or skill category in its corresponding `shared/` file. These
 records are used by both variants, so factual changes only need one edit.
 
 The main files set `\ifcvfocus` and load `shared/document.tex`. Variant files
@@ -65,14 +66,17 @@ All three variants follow this order, controlled by `shared/document.tex`:
 7. Selected Projects
 8. Technical Skills
 9. Certifications
-10. References
 
+
+The general Software Engineering variant covers architecture, AI-enabled systems,
+AI for Software Engineering, applied ML, and Computer Vision. The software-focused
+variants show RecWiz / Reconciliation Wizard instead of the former task tool.
 The Computer Vision variant places Computer Vision first in Research Interests,
-gives image segmentation more detail, omits the lower-priority Task Management
-Tool, and lists Machine Learning & Computer Vision skills first. The SE4AI variant leads with Software Engineering for AI (SE4AI), reliable ML
+gives image segmentation more detail, retains RecWiz after the two ML projects,
+and lists Machine Learning & Computer Vision skills first. The SE4AI variant leads with Software Engineering for AI (SE4AI), reliable ML
 systems, testing, deployment, monitoring, architecture and MLOps in Research Interests,
-emphasizes enterprise work through bullet order, retains a brief Task Management
-Tool entry after the research projects, and lists programming and software skills
+emphasizes enterprise work through bullet order, retains the RecWiz entry after
+the research projects, and lists programming and software skills
 before machine learning skills. Publications remain the same Computer Vision
 research record in both versions. Both variants include AI4SE as a research
 interest, and the Computer Vision variant connects visual robustness to SE4AI.
@@ -119,6 +123,7 @@ cache. The script does not install tools. It reports missing compilers and stops
 on compilation errors. Compiler logs are kept in `build/`; named deliverables
 are updated only after all three variants compile successfully:
 
+- `output/pdf/Saad_Kabir_Uddin_PhD_CV_Software_Engineering.pdf`
 - `output/pdf/Saad_Kabir_Uddin_PhD_CV_Computer_Vision.pdf`
 - `output/pdf/Saad_Kabir_Uddin_PhD_CV_SE4AI.pdf`
 - `output/pdf/Saad_Kabir_Uddin_PhD_CV_AI4SE.pdf`
@@ -165,7 +170,7 @@ and page breaks before using those PDFs.
 ## Layout and review after edits
 
 `commands.tex` defines reusable section, dated-entry, education, research,
-experience, project, publication, and reference commands. Change typography and
+experience, project, and publication commands. Change typography and
 spacing there instead of formatting individual entries. Dates use consistent
 right alignment without tables or manual strings of spaces.
 
@@ -175,7 +180,7 @@ internships and later sections on the next page. Review this page break when
 content expands; adjust wording or the break before reducing the body font.
 
 After meaningful edits, compile and visually inspect **all three** PDFs. Check page
-count, margins, publication wrapping, headings, dates, bullets, references, and
+count, margins, publication wrapping, headings, dates, and bullets, and
 the page break after the bank role. Review compiler logs for overfull boxes and
 other relevant warnings. Also check selectable text, reading order, embedded
 fonts, and clickable link targets. A successful compile alone does not establish
