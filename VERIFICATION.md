@@ -1,10 +1,43 @@
-# Delivery verification
+# Verification — 1 October 2026
 
-Verified on 23 September 2026.
+Latest correction: Dean's List updated to three semesters in both CVs and both
+portfolios. All three projects rebuilt successfully; both PDF education sections
+were rendered and reviewed.
 
-- All four CVs compiled with XeLaTeX on US letter paper and contain two pages.
-- Compiler logs contain no overfull boxes, underfull boxes, or LaTeX warnings.
-- The general Software Engineering CV was rendered and visually reviewed on both pages: no clipped text, stranded headings, or awkward page breaks.
-- Its selectable text follows the intended section order; publication, credential, project, and contact links remain visible.
-- The shared skills and experience edits appear across all four variants. RecWiz appears in every variant; the Computer Vision variant leads with its two ML projects.
-- No CV includes a References section or referee details.
+## Current CVs
+
+- Exactly two maintained LaTeX entry points and named output PDFs: Software
+  Engineering and Computer Vision. Standalone AI4SE and SE4AI variants retired.
+- `bash CV/build.sh` passed with XeLaTeX through latexmk. Both PDFs contain two
+  US letter pages; no LaTeX warnings, overfull boxes, or underfull boxes.
+- All four final pages rendered and visually reviewed after the latest changes.
+- References removed from both CVs and both portfolios at the user's request.
+- Rust appears in programming languages across all three projects. MySQL removed
+  from skills and experience text. Itransition is labeled `.NET Development
+  Training Program`; the unrelated BigLedger internship remains unchanged.
+- PDF text checks confirm Rust and the training-program label, with no References,
+  MySQL, or Intern .NET wording. Publications, research, projects, ML skills,
+  education, dates, and other professional experience remain intact.
+
+## Current portfolio builds
+
+- Academic production build and both tests pass.
+- Professional GitHub Pages production build and all four tests pass. Build uses
+  network access for its existing Google Fonts dependency.
+- References navigation, page/section, and referee data removed. The professional
+  navigation test now expects the remaining seven links.
+- No redesign or deployment-configuration changes. Neither site offers CV
+  downloads; the two PDFs remain local deliverables.
+- Git whitespace checks pass in all three repositories. No push or deployment.
+
+## Earlier verification in this update
+
+Before the latest content corrections, Chrome checked both sites at 1440, 390,
+and 320 pixels with no horizontal overflow, broken section anchors, or runtime
+errors. Existing site styles remain unchanged.
+
+All 18 distinct HTTPS content targets were checked: 17 returned HTTP 200,
+including publication documents, Scholar, GitHub, ORCID, project demos, Colab,
+Coursera, and both live portfolios. LinkedIn returned HTTP 999 and remains
+unverified beyond preservation of its original URL. No external URLs changed
+in the latest correction. Reachability does not establish authenticated access.
