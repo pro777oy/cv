@@ -1,8 +1,10 @@
-# Verification — 1 October 2026
+# Verification — 2 October 2026
 
-Latest correction: Dean's List updated to three semesters in both CVs and both
-portfolios. All three projects rebuilt successfully; both PDF education sections
-were rendered and reviewed.
+Latest correction (2 October): Dean's List updated to two semesters in both CVs
+and both portfolios. All three projects rebuilt successfully; extracted text
+confirms the corrected count in both PDFs.
+
+The checks below were completed on 1 October, before this count correction.
 
 ## Current CVs
 
