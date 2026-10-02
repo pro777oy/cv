@@ -1,10 +1,13 @@
 # Verification — 2 October 2026
 
-Latest correction (2 October): Dean's List updated to two semesters in both CVs
-and both portfolios. All three projects rebuilt successfully; extracted text
-confirms the corrected count in both PDFs.
+Latest update (2 October): refreshed the bank role in both CV variants and both
+portfolios, covering backend architecture, financial data integrity, maintainable
+applications, identity workflows, and production reliability. Both CVs retain
+six concise bank-role bullets and two pages. All three production builds pass;
+all four CV pages were rendered and visually reviewed, with no compiler warnings
+or overfull/underfull boxes. Dean's List remains two semesters.
 
-The checks below were completed on 1 October, before this count correction.
+The checks below were completed on 1 October, before these updates.
 
 ## Current CVs
 
