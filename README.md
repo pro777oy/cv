@@ -65,8 +65,9 @@ Both variants follow this order, controlled by `shared/document.tex`:
 
 
 The primary Software Engineering CV prioritizes Software Engineering, AI for
-Software Engineering (AI4SE), Software Security and AI for Security, Software
-Architecture, and Secure and Reliable Software Systems. These are intended PhD
+Software Engineering (AI4SE), Software Engineering for AI (SE4AI), Software
+Architecture, Software Security and AI for Security, and Reliable AI-Enabled
+Software Systems. These are intended PhD
 research directions, not claims of completed AI4SE or security research. It leads
 its project list with RecWiz and retains all ML projects and skills.
 
